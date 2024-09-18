@@ -4,49 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reproductor de Música</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #121212; /* Fondo oscuro */
-            color: white; /* Texto blanco */
-            text-align: center; /* Centrar texto */
-        }
-        header {
-            background-color: #1E1E1E; /* Header oscuro */
-            color: #E0E0E0; /* Color del texto */
-            padding: 1em 0;
-        }
-        footer {
-            background-color: #1E1E1E; /* Footer oscuro */
-            color: #E0E0E0; /* Color del texto */
-            padding: 1em 0;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-        .container {
-            padding: 20px;
-            margin-bottom: 100px; /* Ajuste para evitar superposición con el footer */
-            display: flex;
-            flex-direction: column;
-            align-items: center; /* Centrar elementos */
-        }
-        a {
-            color: #90CAF9; /* Color del enlace */
-            text-decoration: none;
-            margin: 0 15px;
-        }
-        a:hover {
-            text-decoration: underline; /* Subrayar al pasar el mouse */
-        }
-        .mission-vision {
-            margin: 20px 0;
-            text-align: center;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -66,9 +24,10 @@
     <div class="track-list" id="canciones">
         <h2>Lista de Canciones</h2>
         <ul>
-            <li data-src="cancion.mp3">Canción - Artista (Título de la Canción)</li>
+            <li data-src="cancion.mp3" role="button" aria-label="Reproducir Canción - Artista">Canción - Artista (Título de la Canción)</li>
         </ul>
     </div>
+
     <div class="video-container" id="video">
         <h2>Video de YouTube</h2>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/i5zR6toPVQ8?si=Y-Al0-DZ5ApJ4j5j" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
