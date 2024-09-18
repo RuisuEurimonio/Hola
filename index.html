@@ -1,50 +1,63 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Disfruta de un reproductor de música accesible con canciones y videos de YouTube, con una interfaz amigable y fácil de usar.">
     <title>Reproductor de Música</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<header>
-    <h1>Reproductor de Música</h1>
-    <nav>
-        <a href="#canciones">Canciones</a>
-        <a href="#video">Video</a>
-    </nav>
-</header>
+    <header>
+        <h1>Reproductor de Música</h1>
+        <nav>
+            <a href="#canciones">Canciones</a>
+            <a href="#video">Video</a>
+        </nav>
+    </header>
 
-<div class="container">
-    <audio id="audio" controls>
-        <source id="audio-source" src="" type="audio/mpeg">
-        Tu navegador no soporta el elemento de audio.
-    </audio>
-    <div class="track-list" id="canciones">
-        <h2>Lista de Canciones</h2>
-        <ul>
-            <li data-src="cancion.mp3" role="button" aria-label="Reproducir Canción - Artista">Canción - Artista (Título de la Canción)</li>
-        </ul>
+    <div class="container">
+        <audio id="audio" controls>
+            <source id="audio-source" src="" type="audio/mpeg">
+            Tu navegador no soporta el elemento de audio.
+        </audio>
+        <div class="track-list" id="canciones">
+            <h2>Lista de Canciones</h2>
+            <ul>
+                <li data-src="cancion.mp3" role="button" aria-label="Reproducir Canción - Artista">Canción - Artista
+                    (Título de la Canción)</li>
+            </ul>
+        </div>
+
+        <div class="video-container" id="video">
+            <h2>Video de YouTube</h2>
+            <div class="youtube-video" style="position:relative;">
+                <img id="thumbnail" src="https://img.youtube.com/vi/i5zR6toPVQ8/hqdefault.jpg" alt="Miniatura del video"
+                    style="width:100%; height:100%; cursor:pointer; z-index: 1000;"
+                    onclick="loadVideo()">
+                <div id="iframe-container" style="width:100%; height:100%; top:0; left:0;"></div>
+            </div>
+        </div>
+
+        <div class="mission-vision">
+            <h2>Misión</h2>
+            <p>Proporcionar una plataforma accesible y fácil de usar para disfrutar de la música y el video, fomentando
+                la apreciación de las artes y la cultura.</p>
+            <h2>Visión</h2>
+            <p>Convertirnos en el reproductor de música preferido a nivel mundial, conectando a los usuarios con sus
+                artistas y canciones favoritas.</p>
+        </div>
     </div>
 
-    <div class="video-container" id="video">
-        <h2>Video de YouTube</h2>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/i5zR6toPVQ8?si=Y-Al0-DZ5ApJ4j5j" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </div>
+    <footer>
+        <p>&copy; 2024 Reproductor de Música. Todos los derechos reservados.</p>
+    </footer>
 
-    <div class="mission-vision">
-        <h2>Misión</h2>
-        <p>Proporcionar una plataforma accesible y fácil de usar para disfrutar de la música y el video, fomentando la apreciación de las artes y la cultura.</p>
-        <h2>Visión</h2>
-        <p>Convertirnos en el reproductor de música preferido a nivel mundial, conectando a los usuarios con sus artistas y canciones favoritas.</p>
-    </div>
-</div>
-
-<footer>
-    <p>&copy; 2024 Reproductor de Música. Todos los derechos reservados.</p>
-</footer>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>
