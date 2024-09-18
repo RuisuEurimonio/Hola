@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Disfruta de un reproductor de música accesible con canciones y videos de YouTube, con una interfaz amigable y fácil de usar.">
+    <meta name="description" content="Disfruta de un reproductor de música accesible con canciones y videos de YouTube, con una interfaz amigable y fácil de usar.">
     <title>Reproductor de Música</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -15,8 +14,8 @@
     <header>
         <h1>Reproductor de Música</h1>
         <nav>
-            <a href="#canciones">Canciones</a>
-            <a href="#video">Video</a>
+            <a href="#canciones" role="link">Canciones</a>
+            <a href="#video" role="link">Video</a>
         </nav>
     </header>
 
@@ -25,32 +24,29 @@
             <source id="audio-source" src="" type="audio/mpeg">
             Tu navegador no soporta el elemento de audio.
         </audio>
-        <div class="track-list" id="canciones">
+        <div class="track-list" id="canciones" role="list">
             <h2>Lista de Canciones</h2>
-            <ul>
-                <li data-src="cancion.mp3" role="button" aria-label="Reproducir Canción - Artista">Canción - Artista
-                    (Título de la Canción)</li>
+            <ul role="list">
+                <li data-src="cancion.mp3" role="listitem" aria-label="Reproducir Canción - Artista">Canción - Artista (Título de la Canción)</li>
             </ul>
         </div>
 
         <div class="video-container" id="video">
             <h2>Video de YouTube</h2>
-            <p>Video musical: "RAPTURE (Slowed + Reverb)" - INTERWORLD.</p> <!-- Descripción accesible -->
+            <p style="color: #fff">Video musical: "RAPTURE (Slowed + Reverb)" - INTERWORLD.</p> <!-- Descripción accesible -->
             <div class="youtube-video" style="position:relative;">
-                <img id="thumbnail" src="https://img.youtube.com/vi/i5zR6toPVQ8/hqdefault.jpg" alt="Miniatura del video"
-                    style="width:100%; height:100%; cursor:pointer; z-index: 1000;"
+                <img id="thumbnail" src="https://img.youtube.com/vi/i5zR6toPVQ8/hqdefault.jpg" alt="Miniatura del video que muestra a INTERWORLD interpretando 'RAPTURE (Slowed + Reverb)'."
+                    style="width:100%; height:auto; cursor:pointer; z-index: 1000;"
                     onclick="loadVideo()">
-                <div id="iframe-container" style="width:100%; height:100%; top:0; left:0;"></div>
+                <div id="iframe-container" style="position:absolute; width:100%; height:100%; top:0; left:0;"></div>
             </div>
         </div>
 
         <div class="mission-vision">
             <h2>Misión</h2>
-            <p>Proporcionar una plataforma accesible y fácil de usar para disfrutar de la música y el video, fomentando
-                la apreciación de las artes y la cultura.</p>
+            <p>Proporcionar una plataforma accesible y fácil de usar para disfrutar de la música y el video, fomentando la apreciación de las artes y la cultura.</p>
             <h2>Visión</h2>
-            <p>Convertirnos en el reproductor de música preferido a nivel mundial, conectando a los usuarios con sus
-                artistas y canciones favoritas.</p>
+            <p>Convertirnos en el reproductor de música preferido a nivel mundial, conectando a los usuarios con sus artistas y canciones favoritas.</p>
         </div>
     </div>
 
